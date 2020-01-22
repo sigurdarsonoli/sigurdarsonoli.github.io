@@ -1,0 +1,28 @@
+body {
+    Max-width: 60em;
+    border: 1px solid blue; /* -width - style - color */
+    margin: 1em auto; /* top + bottom / left +right */
+    padding: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: orangered
+}
+ul li{
+    color: green;
+}
+a {
+    color:red;
+    background-color: yellow;
+}
+.ljod {
+    margin-left: 3em;
+}
+.ljod p{
+    font-style: italic;
+    color: darkblue;    
+}
+.ljod strong{
+    color: red;
+}
