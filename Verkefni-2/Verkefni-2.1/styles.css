@@ -1,0 +1,35 @@
+body {
+    max-width: 60em;
+    margin: 1em auto; /* top + bottom / left + right */
+    padding: 1em;
+    font-family: sans-serif;
+}
+.shi {
+    border: 3px solid green;
+}
+.bordi {
+    border: 3px solid red; /* -width - style -color*/
+    padding: 1em 2em ; /* top+bottom left+right*/
+    color: red;
+    margin-bottom: 1em;
+}
+.blues {
+    color: blue;
+    border: 4px dashed blue;
+    padding: .5em;
+}
+li {
+    border: 3px dashed green;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.inline li {
+    display: inline;
+    color: red;
+    border: 3px dashed blue;
+}
+.inlineblock li {
+    display: inline-block;
+    border: 3px dashed red;
+    margin: 1em;
+}

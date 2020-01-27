@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    max-width: 60em;
+    margin: 2em auto;
+}
+.box {
+    border: 1px solid;
+    padding: 1em;
+    width: 50%;
+    float: left;
+}
+.imgR {
+    float: right;
+    padding-left: .5em;
+    width: 50%;
+}
+.bigL {
+    float: left;
+    font-size: 3em;
+    padding: .24em .5em 0 .5em; /* top + right + bottom + left*/
+}
+section {
+    border: 1px solid;
+    padding: 1em;
+}
+/*clearfix*/
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    clear: both;
+}
+.ingR img{
+    width: 100%
+}
+.athugid {
+    text-align: center;
+    background-color: yellow;
+}
+.gratt {
+    background-color: lightgray;
+    text-align: right;
+}
