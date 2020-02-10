@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    max-width: 60em;
+    margin: 0 auto;
+    font-family: sans-serif;
+    display: grid;
+    grid-gap:0;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer";
+    grid-template-columns: 1fr 1fr;
+}
+.footer {
+    grid-area: footer;
+    text-align: right;
+}
+/* grid areas*/
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+}
+.main {
+    display: grid;
+    grid-gap: 1em;
+    grid-area: main;
+    text-align: left;
+    grid-template-areas: 
+    "as1 article as2";
+    grid-template-columns: 1fr 1fr 1fr; /* fraction - hutfall */
+}
+.article {
+    grid-area: article;
+    text-align: left;
+}
+.as1 {
+    grid-area: as1;
+    text-align: left;
+}
+.as2 {
+    grid-area: as2  ;
+    text-align: left;
+}
