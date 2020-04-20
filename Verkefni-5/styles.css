@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box; 
+}
+
+/* ====== GRID Area + GRID Template/Column Areas ===== */
+
+.body {
+    grid-area: body;
+    display: grid;
+    margin: 0em;
+    grid-template-areas: 
+        "container"
+        "midja"
+        "footer"
+        "copy";
+    background-image: linear-gradient(rgb(0,65,130), rgb(0,33,61));
+}
+.container {
+    display: grid;
+    max-width: 60em;
+    margin: auto;
+    grid-area: container;
+    padding-bottom: 3em;
+    grid-template-areas: 
+    "header verkefni"
+    "header topnav";
+    grid-template-columns: 2fr 1fr;
+
+}
+.header {
+    grid-area: header;
+    color: white;
+    margin: 0em;
+    padding-top: 2em;
+}
+.verkefni {
+    grid-area: verkefni;
+    text-align: right;
+    padding-left: 15em;
+    color: white;
+}
+.topnav {
+    grid-area: topnav;
+    color: white;
+    text-align: right;
+    padding-top: 4em;
+    word-spacing: 3em;
+}
+.midja {
+    grid-area: midja;
+    background-image: linear-gradient(rgb(224, 178, 39), rgb(255, 238, 185));
+}
+.main {
+    display: grid;
+    max-width: 60em;
+    grid-area: main;
+    margin: auto;
+    grid-template-areas: 
+    "litaskali vefdaemi";
+    grid-template-columns: 1fr 1fr;
+}
+.litaskali {
+    grid-area: litaskali;
+    padding: 3em;
+}
+.litatitill {
+    font-size: 30px;
+}
+.vefdaemi {
+    grid-area: vefdaemi;
+    padding: 3em;
+}
+.kassi {
+    background-color: rgb(255, 255, 255, 0.3);    
+}
+.footer {
+    display: grid;
+    max-width: 60em;
+    grid-area: footer;
+    margin: auto;
+    grid-template-areas: 
+    "afangar relative absolute";
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.afangar {
+    grid-area: afangar;
+    
+}
+.relative {
+    grid-area: relative;
+
+}
+.absolute {
+    grid-area: absolute;
+    
+}
+.copy {
+    grid-area: copy;
+    margin: auto;
+    max-width: 60em;
+}
+
+/* ====== Base CSS ====== */
+
+.afangar,
+.relative,
+.absolute {
+    color: white;
+}
+a:link {
+    color: rgb(202, 202, 52);
+    text-decoration: none;
+}
+a:visited {
+    color: orange;
+}
+a:hover {
+    text-decoration: underline;
+}
