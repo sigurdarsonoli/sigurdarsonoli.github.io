@@ -10,10 +10,9 @@
     margin: 0em;
     grid-template-areas: 
         "container"
-        "midja"
-        "footer"
-        "copy";
-    background-image: linear-gradient(rgb(0,65,130), rgb(0,33,61));
+        "main"
+        "footer";
+    background-image: linear-gradient(rgb(0,65,130), rgb(0,33,61));       
 }
 .container {
     display: grid;
@@ -25,7 +24,6 @@
     "header verkefni"
     "header topnav";
     grid-template-columns: 2fr 1fr;
-
 }
 .header {
     grid-area: header;
@@ -46,74 +44,46 @@
     padding-top: 4em;
     word-spacing: 3em;
 }
-.midja {
-    grid-area: midja;
+.gulur {
     background-image: linear-gradient(rgb(224, 178, 39), rgb(255, 238, 185));
 }
 .main {
-    display: grid;
-    max-width: 60em;
     grid-area: main;
-    margin: auto;
-    grid-template-areas: 
-    "litaskali vefdaemi";
-    grid-template-columns: 1fr 1fr;
-}
-.litaskali {
-    grid-area: litaskali;
-    padding: 3em;
-}
-.litatitill {
-    font-size: 30px;
-}
-.vefdaemi {
-    grid-area: vefdaemi;
-    padding: 3em;
-}
-.kassi {
-    background-color: rgb(255, 255, 255, 0.3);    
-}
-.footer {
-    display: grid;
     max-width: 60em;
-    grid-area: footer;
     margin: auto;
-    grid-template-areas: 
-    "afangar relative absolute";
-    grid-template-columns: 1fr 1fr 1fr;
-
 }
-.afangar {
-    grid-area: afangar;
-    
-}
-.relative {
-    grid-area: relative;
-
-}
-.absolute {
-    grid-area: absolute;
-    
-}
-.copy {
-    grid-area: copy;
+.innermenu {
+    grid-area: innermenu;
+    background-color: rgb(0,65,130);
     margin: auto;
+    margin-top: 2em;
     max-width: 60em;
+    display: flex;
+    justify-content: space-evenly;
+
 }
-
-/* ====== Base CSS ====== */
-
-.afangar,
-.relative,
-.absolute {
-    color: white;
+.innermenu a {
+    border-right: solid white;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+}
+.innermenu a:last-child {
+    border-right: none;
+   
+}
+.tenglar {
+    grid-area: tenglar;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 a:link {
-    color: rgb(202, 202, 52);
+    color: rgb(0,65,130);
     text-decoration: none;
 }
 a:visited {
-    color: orange;
+    color: white;
 }
 a:hover {
     text-decoration: underline;
