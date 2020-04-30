@@ -1,0 +1,194 @@
+* { box-sizing: border-box } 
+html {
+    scroll-behavior: smooth;
+  }
+/* ====== GRID Area + GRID Template/Column Areas ===== */
+
+.body {
+    display: grid;
+    margin: 0;
+    grid-template-areas: 
+        "container"
+        "main"
+        "footer";
+    background-image: linear-gradient(green, yellow);
+    font: 400 1em/1.5 "Open Sans", sans-serif; /* samsett skipun: weight/height, size, family */
+}
+
+/* ====== CONTAINER ===== */
+
+.container {
+    grid-area: container;
+    padding-bottom: 3em
+} 
+.main {
+    grid-area: main;
+    padding: 1em;
+} 
+/* ath */
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.header h1{
+    text-align: center;
+    font-size: 4em;
+    margin-top: 1em;
+    color: #0f0;
+}
+.header div {
+    margin: 0 auto;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(0,65,130);
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 60em;
+    display: flex;
+    flex-flow: column;  /*ath er row í 48+*/
+}
+.nav a {
+    display: block;
+    text-align: center;
+    padding: 0.4em;
+}
+.color {
+    background-color: rgba(255,255,255, .5);  /* blái bakgrunnsliturinn er ekki góður */
+}
+
+/*************** grid 0-48em ****************/
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+/* hér kemur myndaramminn 2 dálkar í minstu stærð*/
+.col-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+/* ====== Myndir ath! hafa allar myndir sveigjanlegar ===== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.map {
+    width: 28em;
+    height: 19em;
+}
+/* ====== FOOTER ath temp-areas ===== */
+
+.footer {
+    max-width: 60em;  /*ath hér notaðir þú min-width: 60em; sem kemur í veg fyrir að vefsíðan sé sveijanleg */
+    margin: 0;  
+    padding: 1em;
+}
+
+/* ====== efnisyfirlit ok ===== */
+
+.nav a:link {
+    color:white;
+    text-decoration: none;
+}
+.nav a:visited {
+    color: white;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+
+a:link {
+    color:blue;
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    text-decoration: underline;
+}
+.ahugamal {
+    display: none; /* ath */
+}
+/* ====== Media ===== */
+
+/*  ========================================
+Viðmið - breakpoints 30em = 480px + 
+========================================*/
+
+ @media screen and (min-width:30em) {
+    .body {
+        min-width: 36.1em; /* height er vandamál í símum */
+        }
+    
+}
+
+/*  ========================================
+Viðmið - breakpoints 37.5em = 600px + 
+========================================*/
+
+@media screen and (min-width:37.5em) {
+}
+
+/* ========================================
+Viðmið - breakpoints 48em = 760px +
+======================================== */
+
+@media screen and (min-width:48em) {
+    .body {
+    min-height: 36.1em; /* height er vandamál í símum */
+    }
+    .nav {
+        flex-flow: row;  /*ath*/
+        justify-content: space-around;
+    }
+    /*************** grid 48em + ****************/
+    .col-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .col-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .ahugamal {
+        display: grid; /* ath */
+    }
+}
+
+/* ========================================
+Viðmið - breakpoints 60em = 960px +
+======================================== */
+
+@media screen and (min-width:60em) {
+    .body {
+        max-width: 60em;
+        margin: 0 auto;
+    }
+}
+
+/* ========================================
+Viðmið - breakpoints 80em = 1280px +
+======================================== */
+
+@media screen and (min-width:80em) {
+
+}
